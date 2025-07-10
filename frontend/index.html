@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Web-Based EDA Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #fafafa;
+    }
+    textarea {
+      width: 95%;
+      height: 200px;
+      font-family: monospace;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: #fff;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #output, #waveformOutput {
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      padding: 15px;
+      white-space: pre-wrap;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Web-Based HDL Simulator</h1>
+
+  <h3>Design (Verilog)</h3>
+  <textarea id="design">// Enter your Verilog design here</textarea>
+
+  <h3>Testbench</h3>
+  <textarea id="testbench">// Enter your Verilog testbench here</textarea>
+
+  <div>
+    <button onclick="compile()">Compile</button>
+    <button onclick="runSim()">Run</button>
+    <button onclick="viewWave()">View GTKWave</button>
+  </div>
+
+  <h3>Simulation Output</h3>
+  <div id="output">Output will appear here...</div>
+
+  <h3>Waveform Output</h3>
+  <div id="waveformOutput">No waveform yet.</div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
